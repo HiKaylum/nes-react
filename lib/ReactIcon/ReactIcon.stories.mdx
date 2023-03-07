@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import ReactIcon from "./ReactIcon";
+
+<Meta title="React Icon" component={ReactIcon} />
+
+export const Template = ({ children, ...args }) => <ReactIcon {...args} />;
+
+# REact Icons
+
+<Canvas>
+  <Story name="Icon" args={{ type: "heart" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

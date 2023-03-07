@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Text from "./Text";
+
+<Meta title="Text" component={Text} />
+
+export const Template = ({ children, ...args }) => (
+  <Text {...args}>{children || "Hello World"}</Text>
+);
+
+# Text
+
+<Canvas>
+  <Story name="Text">{Template.bind({})}</Story>
+</Canvas>

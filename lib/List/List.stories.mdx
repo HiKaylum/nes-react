@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import List from "./List";
+
+<Meta title="List" component={List} />
+
+export const Template = ({ children, ...args }) => <List {...args} />;
+
+# Lists
+
+<Canvas>
+  <Story
+    name="List Disc"
+    args={{
+      items: [
+        "Good morning.",
+        `Thou hast had a good night's sleep, I hope.`,
+        "Thou hast had a good afternoon",
+        "Good night.",
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="List Circle"
+    args={{
+      type: "circle",
+      items: [
+        "Good morning.",
+        `Thou hast had a good night's sleep, I hope.`,
+        "Thou hast had a good afternoon",
+        "Good night.",
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

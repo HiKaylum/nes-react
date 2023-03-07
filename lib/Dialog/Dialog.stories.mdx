@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Dialog from "./Dialog";
+
+<Meta title="Dialog" component={Dialog} />
+
+export const Template = ({ children, ...args }) => (
+  <Dialog {...args}>{children}</Dialog>
+);
+
+# Dialog
+
+<Canvas>
+  <Story
+    name="Dialog"
+    args={{
+      buttonLabel: "Open dialog",
+      children: <p>I am a Dialog</p>,
+      onCancel: () => {},
+      onConfirm: () => {},
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Dialog Dark"
+    args={{
+      buttonLabel: "Open dark dialog",
+      isDark: true,
+      children: <p>I am a dark Dialog</p>,
+      onCancel: () => {},
+      onConfirm: () => {},
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Dialog Rounded"
+    args={{
+      buttonLabel: "Open rounded dialog",
+      isRounded: true,
+      children: <p>I am a rounded Dialog</p>,
+      onCancel: () => {},
+      onConfirm: () => {},
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Dialog Dark & Rounded"
+    args={{
+      buttonLabel: "Open dark and rounded dialog",
+      isDark: true,
+      isRounded: true,
+      children: <p>I am a dark Dialog</p>,
+      onCancel: () => {},
+      onConfirm: () => {},
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

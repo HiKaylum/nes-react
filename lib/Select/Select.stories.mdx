@@ -1,0 +1,86 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Select from "./Select";
+
+<Meta title="Select" component={Select} />
+
+export const Template = ({ children, ...args }) => <Select {...args} />;
+
+# Select
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: "Default select",
+      id: "default-select",
+      options: [
+        { label: "To be", value: "0" },
+        { label: "Not to be", value: "1" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Success"
+    args={{
+      label: "Success select",
+      type: "success",
+      id: "success-select",
+      options: [
+        { label: "To be", value: "0" },
+        { label: "Not to be", value: "1" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Warning"
+    args={{
+      label: "Warning select",
+      type: "warning",
+      id: "warning-select",
+      options: [
+        { label: "To be", value: "0" },
+        { label: "Not to be", value: "1" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Error"
+    args={{
+      label: "Error select",
+      type: "error",
+      id: "error-select",
+      options: [
+        { label: "To be", value: "0" },
+        { label: "Not to be", value: "1" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Select Dark
+
+<Canvas>
+  <Story
+    name="Dark"
+    args={{
+      label: "Dark select",
+      id: "dark-select",
+      isDark: true,
+      options: [
+        { label: "To be", value: "0" },
+        { label: "Not to be", value: "1" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Icon from "./Icon";
+
+<Meta title="Icons" component={Icon} />
+
+export const Template = ({ children, ...args }) => <Icon {...args} />;
+
+# Icons
+
+<Canvas>
+  <Story name="Icons" args={{ type: "github" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

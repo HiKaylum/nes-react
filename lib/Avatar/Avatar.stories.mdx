@@ -1,0 +1,78 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Avatar from "./Avatar";
+
+<Meta title="Avatar" component={Avatar} />
+
+export const Template = ({ children, ...args }) => <Avatar {...args} />;
+
+# Avatars
+
+<Canvas>
+  <Story
+    name="Small"
+    args={{
+      src: "https://www.gravatar.com/avatar?s=15",
+      alt: "Gravatar image example",
+      size: "small",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Default"
+    args={{
+      src: "https://www.gravatar.com/avatar?s=15",
+      alt: "Gravatar image example",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Large"
+    args={{
+      src: "https://www.gravatar.com/avatar?s=15",
+      alt: "Gravatar image example",
+      size: "large",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Avatars Rounded
+
+<Canvas>
+  <Story
+    name="Rounded Small"
+    args={{
+      src: "https://www.gravatar.com/avatar?s=15",
+      alt: "Gravatar image example",
+      size: "small",
+      isRounded: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Rounded"
+    args={{
+      src: "https://www.gravatar.com/avatar?s=15",
+      alt: "Gravatar image example",
+      isRounded: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Rounded Large"
+    args={{
+      src: "https://www.gravatar.com/avatar?s=15",
+      alt: "Gravatar image example",
+      size: "large",
+      isRounded: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

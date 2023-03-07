@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Container from "./Container";
+
+<Meta title="Container" component={Container} />
+
+export const Template = ({ children, ...args }) => (
+  <Container {...args}>{children}</Container>
+);
+
+# Containers
+
+<Canvas>
+  <Story
+    name="Container Centered"
+    args={{
+      title: "Container Centered",
+      isCentered: true,
+      children: <p>Good morning. Thou hast had a good night's sleep, I hope</p>,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Container Dark"
+    args={{
+      title: "Container Dark",
+      isDark: true,
+      children: <p>Good morning. Thou hast had a good night's sleep, I hope</p>,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Container Rounded"
+    args={{
+      isRounded: true,
+      children: <p>Good morning. Thou hast had a good night's sleep, I hope</p>,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Container Rounded Dark"
+    args={{
+      isDark: true,
+      children: <p>Good morning. Thou hast had a good night's sleep, I hope</p>,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

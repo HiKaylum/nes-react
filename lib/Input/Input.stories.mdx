@@ -1,0 +1,65 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Input from "./Input";
+
+<Meta title="Input" component={Input} />
+
+export const Template = ({ children, ...args }) => <Input {...args} />;
+
+# Inputs
+
+<Canvas>
+  <Story name="Input" args={{ label: "Your name", id: "name" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Input Success"
+    args={{
+      label: "Success",
+      id: "success",
+      isInline: true,
+      type: "success",
+      placeholder: "NES.css",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Input Warning"
+    args={{
+      label: "Warning",
+      id: "warning",
+      isInline: true,
+      type: "warning",
+      placeholder: "8bit.css",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Input Error"
+    args={{
+      label: "Error",
+      id: "error",
+      isInline: true,
+      type: "error",
+      placeholder: "awesome.css",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Input Dark
+
+<Canvas style={{ background: "#212529" }}>
+  <Story
+    name="Input Dark"
+    args={{ label: "Your name", id: "name", isDark: true }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

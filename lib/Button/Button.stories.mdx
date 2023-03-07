@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Button from "./Button";
+
+<Meta title="Button" component={Button} />
+
+export const Template = ({ children, ...args }) => (
+  <Button {...args}>{children || "Hello World"}</Button>
+);
+
+# Button
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>
+
+# File
+
+<Canvas>
+  <Story name="File" args={{ as: "file", children: "Select your file" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Button as a Link
+
+<Canvas>
+  <Story name="Link" args={{ as: "link", href: "#" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

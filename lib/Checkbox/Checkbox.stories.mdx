@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Checkbox from "./Checkbox";
+
+<Meta title="Checkbox" component={Checkbox} />
+
+export const Template = ({ children, ...args }) => <Checkbox {...args} />;
+
+# Checkbox
+
+<Canvas>
+  <Story
+    name="Checkbox"
+    args={{ label: "Enable", value: "enable", onChange: () => {} }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Checkbox Dark
+
+<Canvas style={{ background: "#212529" }}>
+  <Story
+    name="Checkbox Dark"
+    args={{
+      label: "Dark",
+      value: true,
+      isDark: true,
+      checked: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

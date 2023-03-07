@@ -1,0 +1,45 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Progress from "./Progress";
+
+<Meta title="Progress" component={Progress} />
+
+export const Template = ({ children, ...args }) => <Progress {...args} />;
+
+# Progress
+
+<Canvas>
+  <Story name="Default" args={{ value: "90", max: "100" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Primary" args={{ value: "80", max: "100", type: "primary" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Success" args={{ value: "50", max: "100", type: "success" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Warning" args={{ value: "30", max: "100", type: "warning" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Error" args={{ value: "10", max: "100", type: "error" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Pattern" args={{ value: "50", max: "100", type: "pattern" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

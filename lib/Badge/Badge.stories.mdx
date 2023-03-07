@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Icon from "../Icon/Icon";
+import Badge from "./Badge";
+
+<Meta title="Badge" component={Badge} />
+
+export const Template = ({ children, ...args }) => <Badge {...args} />;
+
+# Badges
+
+<Canvas>
+  <Story name="Default" args={{ label: "NES.css" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Primary" args={{ label: "is", type: "primary" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Success" args={{ label: "a", type: "success" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Warning" args={{ label: "great", type: "warning" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Error" args={{ label: "framework", type: "error" }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Split"
+    args={{ label: "npm", splitLabel: "1.1.0", splitType: "primary" }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Split Alt"
+    args={{ label: "test", splitLabel: "100%", splitType: "success" }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Split Icon"
+    args={{
+      label: "Icons",
+      type: "primary",
+      splitIcon: <Icon type="star" size="small" />,
+      splitType: "warning",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Split Icon Text"
+    args={{
+      label: "Text",
+      type: "warning",
+      splitIcon: "10",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

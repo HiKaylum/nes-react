@@ -1,0 +1,47 @@
+import { useState } from "react";
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import Radios from "./Radios";
+
+<Meta title="Radios" component={Radios} />
+
+export const Template = ({ children, ...args }) => <Radios {...args} />;
+
+# Radios
+
+<Canvas>
+  <Story
+    name="Radios"
+    args={{
+      name: "radio-set",
+      onChange: () => {},
+      value: "no",
+      options: [
+        { label: "Yes", value: "yes" },
+        { label: "No", value: "no" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Radios Dark
+
+<Canvas style={{ background: "#212529" }}>
+  <Story
+    name="Radios Dark"
+    args={{
+      isDark: true,
+      name: "radio-set-dark",
+      onChange: () => {},
+      value: true,
+      options: [
+        { label: "Yes", value: true },
+        { label: "No", value: false },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
