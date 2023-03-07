@@ -1,17 +1,17 @@
 {
-  "name": "@kylum/react-nes",
+  "name": "@kylum/nes-react",
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/react-nes.umd.cjs",
-  "module": "./dist/react-nes.js",
+  "main": "./dist/nes-react.umd.cjs",
+  "module": "./dist/nes-react.js",
   "exports": {
     ".": {
-      "import": "./dist/react-nes.js",
-      "require": "./dist/react-nes.umd.cjs"
+      "import": "./dist/nes-react.js",
+      "require": "./dist/nes-react.umd.cjs"
     }
   },
   "repository": {

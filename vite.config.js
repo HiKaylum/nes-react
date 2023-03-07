@@ -10,8 +10,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/index.js'),
-      name: 'react-nes',
-      filename: 'react-nes'
+      name: 'nes-react',
+      filename: 'nes-react'
     },
     rollupOptions: {
       external: [
