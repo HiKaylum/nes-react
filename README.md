@@ -3,7 +3,7 @@
 Install
 
 ```
-npm i @kylum/nes-react ness.css @fontsource/press-start-2p
+npm i @kylum/nes-react nes.css @fontsource/press-start-2p
 ```
 
 Import `App.js`
